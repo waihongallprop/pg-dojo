@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+BASE=$(dirname $0)
+PHPUNIT=${BASE}/vendor/phpunit/phpunit/composer/bin/phpunit
+
+test -t 0 && COLOR="--color"
+
+${PHPUNIT} ${COLOR} --bootstrap ${BASE}/src/bootstrap.php ${BASE}/tests
