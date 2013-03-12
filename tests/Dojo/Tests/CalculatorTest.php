@@ -6,7 +6,7 @@ use Dojo\Calculator;
 
 class CalculatorTest extends \PHPUnit_Framework_TestCase
 {
-    function testDisplaysZeroWhenEnteringZero()
+    public function testDisplaysZeroWhenEnteringZero()
     {
         // Arrange
         $this->calculator = new Calculator();
