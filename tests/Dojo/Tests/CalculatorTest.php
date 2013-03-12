@@ -6,12 +6,17 @@ use Dojo\Calculator;
 
 class CalculatorTest extends \PHPUnit_Framework_TestCase
 {
-    function setUp() {
+    function testDisplaysZeroWhenEnteringZero()
+    {
+        // Arrange
         $this->calculator = new Calculator();
-    }
 
-    public function testDisplaysZeroWhenEnteringZero() {
-        $this->calculator.enter('0');
-        $this->assertEqual('0', calculator.display());
+        // Act
+        $this->calculator->enter('0');
+
+        // Assert
+        $expected = '0';
+        $actual = $this->calculator->display();
+        $this->assertEquals($expected, $actual);
     }
 }
